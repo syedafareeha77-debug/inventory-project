@@ -170,7 +170,8 @@ const Dashboard = () => {
               ))}
             </div>
 
-            <button className="mt-4 w-full py-3 rounded-xl bg-emerald-500 text-[#022c22] font-bold hover:bg-emerald-400 transition">
+            <button className="mt-4 w-full py-3 rounded-xl bg-emerald-500 text-[#022c22] font-bold hover:bg-emerald-400 transition"
+              onClick={handleRestockAll}>
               Restock All
             </button>
           </div>

@@ -66,3 +66,9 @@ export const addStock = async (stock) => {
   const res = await API.post("/stock", stock);
   return res.data;
 };
+
+// --- Restock All (Protected) ---
+export const restockAllProducts = async () => {
+  const res = await API.put("/products/restock-all");
+  return res.data;
+};
