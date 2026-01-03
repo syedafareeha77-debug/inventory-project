@@ -8,7 +8,7 @@ const API = axios.create({
 API.interceptors.request.use(
   (config) => {
     const token = localStorage.getItem("token");
-    if (token) config.headers.Authorization = `Bearer ${token}`;
+    if (token) config.headers.Authorization = Bearer ${token};
     return config;
   },
   (error) => Promise.reject(error)
@@ -53,7 +53,7 @@ export const addProduct = async (product) => {
   return res.data;
 };
 export const deleteProduct = async (id) => {
-  const res = await API.delete(`/products/${id}`);
+  const res = await API.delete(/products/${id});
   return res.data;
 };
 
@@ -64,11 +64,5 @@ export const getStock = async () => {
 };
 export const addStock = async (stock) => {
   const res = await API.post("/stock", stock);
-  return res.data;
-};
-
-// --- Restock All (Protected) ---
-export const restockAllProducts = async () => {
-  const res = await API.put("/products/restock-all");
   return res.data;
 };
